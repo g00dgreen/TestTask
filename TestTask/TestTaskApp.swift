@@ -11,7 +11,7 @@ import SwiftUI
 struct TestTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(model: CellViewModel(model: []))
+            ContentView(model: CellViewModel(model: [], numberOfCellForAction: 2))
         }
     }
 }

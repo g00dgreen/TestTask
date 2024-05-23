@@ -69,15 +69,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(
-            model: CellViewModel(
-                model: [CellModel(
-                    id: UUID(),
-                    title: "Мертвая",
-                    subTitle: "или прикидывается",
-                    imageLabel: "\u{2620}",
-                    backgroundImage: Image("Ellipse")
-                )]
-            )
+            model: CellViewModel(model: [CellModel.init(cellState: .live)], numberOfCellForAction: 2)
         )
     }
 }
